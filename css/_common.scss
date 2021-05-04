@@ -1,0 +1,122 @@
+// colors
+
+// Mixins
+
+
+// Letter Spacing
+@for $i from 1 through 90 {
+    .ls-#{$i} {
+        letter-spacing: $i * 1px !important;
+    }
+}
+
+// Line Heights
+
+@for $i from 1 through 90 {
+    .lh-#{$i} {
+        line-height: $i * 1px;
+    }
+}
+
+
+/* Font weights */
+
+@for $i from 1 through 9 {
+    .fw-#{$i} {
+        font-weight: $i * 100 !important;
+    }
+}
+
+/* font Sizes */
+@for $i from 1 through 99 {
+    .fz-#{$i} {
+        font-size: $i / 16 * 1rem !important;
+
+        @media(max-width: 768px){
+            @if $i > 60{
+                font-size: 3rem !important;
+            }
+        }
+        @media(max-width: 575px){
+            @if $i > 40{
+                font-size: 2rem !important;
+            }
+            @if $i > 16{
+                font-size: 1rem !important;
+            }
+        }
+   
+    }
+}
+
+$img-size:(
+    '200': 200,
+    '300': 300,
+    '400': 400,
+    '500': 500
+);
+
+@each $img-size, $i in $img-size {
+    img.w-#{$i}{
+        @media(max-width: 768px){
+            max-width: $i * 1px;
+        }
+        @media(max-width: 480px){
+            max-width: 100%
+        }
+    }
+}
+/* Borders */
+
+.bn {
+    border: none;
+}
+
+@for $i from 0 through 50 {
+    .br-#{$i} {
+        border-radius: $i * 1px !important;
+    }
+}
+
+/* Anchor Tags */
+.tdn {
+    text-decoration: none !important;
+}
+
+.tdu {
+    text-decoration: underline;
+}
+
+/* Postions */
+.posr {
+    position: relative;
+}
+
+.posf {
+    position: fixed;
+}
+
+.posa {
+    position: absolute;
+}
+
+/* overflows */
+.oh {
+    overflow: hidden;
+}
+
+.oxh {
+    overflow-x: hidden;
+}
+
+.oyh {
+    overflow-y: hidden;
+}
+
+.oxs {
+    overflow-x: scroll;
+}
+
+.oys {
+    overflow-y: scroll;
+}
